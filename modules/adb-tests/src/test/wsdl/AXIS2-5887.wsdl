@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <wsdl:definitions xmlns:tns="webservice/xtc/plugins/Speed4Trade/com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="webservice" targetNamespace="webservice/xtc/plugins/Speed4Trade/com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
-    <wsdl:types><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="webservice/xtc/plugins/Speed4Trade/com">
+    <wsdl:types><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="webservice/xtc/plugins/Speed4Trade/com">
 	<xsd:complexType name="Product">
 		<xsd:sequence>
 
@@ -314,7 +314,7 @@
 			</xsd:element>
 			<xsd:element name="orders_total" type="tns:Orders_total"
 				maxOccurs="unbounded" minOccurs="0">
-			</xsd:element>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -546,7 +546,7 @@
 					</xsd:element>
 					<xsd:element name="banktransfer_blz"
 						type="xsd:string" nillable="true">
-					</xsd:element>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -904,7 +904,7 @@
 		<xsd:sequence>
 			<xsd:element name="languagesarray" type="tns:Languages"
 				minOccurs="0" maxOccurs="unbounded">
-			</xsd:element>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 	
@@ -1256,7 +1256,7 @@
                     <xsd:element name="descriptions"
             			type="tns:CouponDescription" minOccurs="0"
             			maxOccurs="unbounded">
-            		</xsd:element>
+            		</xsd:element>
             	</xsd:sequence>
 	      </xsd:extension>
 	     </xsd:complexContent>
@@ -1357,7 +1357,7 @@
             		</xsd:element>
             		<xsd:element name="value" type="xsd:string"
             			nillable="false">
-            		</xsd:element>
+            		</xsd:element>
             	</xsd:sequence>
             </xsd:complexType>
 
@@ -1375,7 +1375,7 @@
                     <xsd:element name="server_position" type="xsd:string"></xsd:element>
                     <xsd:element name="binary_source"
             			type="xsd:base64Binary">
-            		</xsd:element>
+            		</xsd:element>
             	</xsd:sequence>
             </xsd:complexType>
 
@@ -1474,7 +1474,7 @@
             				</xsd:element>
             				<xsd:element name="customers_last_modified"
             					type="xsd:dateTime" nillable="true">
-            				</xsd:element>
+            				</xsd:element>
             				<xsd:element name="addressbookarray"
             					type="tns:AddressBook" minOccurs="0" maxOccurs="unbounded">
             				</xsd:element>
@@ -1522,7 +1522,7 @@
             				</xsd:element>
             				<xsd:element name="entry_country_iso"
             					type="xsd:string" nillable="false">
-            				</xsd:element>
+            				</xsd:element>
             				<xsd:element name="address_date_added"
             					type="xsd:string" nillable="true">
             				</xsd:element>
@@ -1592,9 +1592,9 @@
     <wsdl:message name="saveProductsResponse">
     	<wsdl:part name="success" type="tns:RequestResponseArray"></wsdl:part>
     </wsdl:message>
-    <wsdl:message name="getOrdersByStatusRequest">
+    <wsdl:message name="getOrdersByStatusRequest">
     	<wsdl:part name="baseRequest" type="tns:BaseRequest"></wsdl:part>
-    	<wsdl:part name="statusid" type="xsd:int"></wsdl:part>
+    	<wsdl:part name="statusid" type="xsd:int"></wsdl:part>
     </wsdl:message>
     <wsdl:message name="getOrdersByStatusResponse">
     	<wsdl:part name="orders" type="tns:Orders"></wsdl:part>
@@ -1702,7 +1702,7 @@
     	</wsdl:part>
     </wsdl:message>
     <wsdl:message name="getCustomerStatusRequest">
-    	<wsdl:part name="baseRequest" type="tns:BaseRequest"></wsdl:part>
+    	<wsdl:part name="baseRequest" type="tns:BaseRequest"></wsdl:part>
     </wsdl:message>
     <wsdl:message name="getCustomerStatusResponse">
     	<wsdl:part name="customerstatusarray" type="tns:CustomerStatusArray"></wsdl:part>
@@ -1844,47 +1844,47 @@
     <wsdl:portType name="xtcPortType">
     	<wsdl:operation name="getProduct">
     		<wsdl:input message="tns:getProductRequest"></wsdl:input>
-    		<wsdl:output message="tns:getProductResponse"></wsdl:output>
+    		<wsdl:output message="tns:getProductResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveProducts">
     		<wsdl:input message="tns:saveProductsRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveProductsResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveProductsResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="deleteProducts">
     		<wsdl:input message="tns:deleteProductsRequest"></wsdl:input>
-    		<wsdl:output message="tns:deleteProductsResponse"></wsdl:output>
+    		<wsdl:output message="tns:deleteProductsResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getOrdersByStatus">
     		<wsdl:input message="tns:getOrdersByStatusRequest"></wsdl:input>
-    		<wsdl:output message="tns:getOrdersByStatusResponse"></wsdl:output>
+    		<wsdl:output message="tns:getOrdersByStatusResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveOrders">
     		<wsdl:input message="tns:saveOrdersRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveOrdersResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveOrdersResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="deleteOrder">
     		<wsdl:input message="tns:deleteOrderRequest"></wsdl:input>
-    		<wsdl:output message="tns:deleteOrderResponse"></wsdl:output>
+    		<wsdl:output message="tns:deleteOrderResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveCategories">
     		<wsdl:input message="tns:saveCategoriesRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveCategoriesResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveCategoriesResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getCategories">
     		<wsdl:input message="tns:getCategoriesRequest"></wsdl:input>
-    		<wsdl:output message="tns:getCategoriesResponse"></wsdl:output>
+    		<wsdl:output message="tns:getCategoriesResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveManufacturers">
     		<wsdl:input message="tns:saveManufacturersRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveManufacturersResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveManufacturersResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getManufacturers">
     		<wsdl:input message="tns:getManufacturersRequest"></wsdl:input>
-    		<wsdl:output message="tns:getManufacturersResponse"></wsdl:output>
+    		<wsdl:output message="tns:getManufacturersResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveOrdersStatus">
     		<wsdl:input message="tns:saveOrdersStatusRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveOrdersStatusResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveOrdersStatusResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getOrdersStatus">
     		<wsdl:input message="tns:getOrdersStatusRequest"></wsdl:input>
@@ -1892,19 +1892,19 @@
         </wsdl:operation>
     	<wsdl:operation name="saveShippingStatus">
     		<wsdl:input message="tns:saveShippingStatusRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveShippingStatusResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveShippingStatusResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getShippingStatus">
     		<wsdl:input message="tns:getShippingStatusRequest"></wsdl:input>
-    		<wsdl:output message="tns:getShippingStatusResponse"></wsdl:output>
+    		<wsdl:output message="tns:getShippingStatusResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveProductsVpe">
     		<wsdl:input message="tns:saveProductsVpeRequest"></wsdl:input>
-    		<wsdl:output message="tns:saveProductsVpeResponse"></wsdl:output>
+    		<wsdl:output message="tns:saveProductsVpeResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getProductsVpe">
     		<wsdl:input message="tns:getProductsVpeRequest"></wsdl:input>
-    		<wsdl:output message="tns:getProductsVpeResponse"></wsdl:output>
+    		<wsdl:output message="tns:getProductsVpeResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="checkLogin">
     		<wsdl:input message="tns:checkLoginRequest"></wsdl:input>
@@ -1912,11 +1912,11 @@
     	</wsdl:operation>
     	<wsdl:operation name="getLanguages">
     		<wsdl:input message="tns:getLanguagesRequest"></wsdl:input>
-    		<wsdl:output message="tns:getLanguagesResponse"></wsdl:output>
+    		<wsdl:output message="tns:getLanguagesResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="getCustomerStatus">
     		<wsdl:input message="tns:getCustomerStatusRequest"></wsdl:input>
-    		<wsdl:output message="tns:getCustomerStatusResponse"></wsdl:output>
+    		<wsdl:output message="tns:getCustomerStatusResponse"></wsdl:output>
         </wsdl:operation>
     	<wsdl:operation name="saveVariantData">
     		<wsdl:input message="tns:saveVariantDataRequest"></wsdl:input>
